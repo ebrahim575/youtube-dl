@@ -1,0 +1,3 @@
+([('main',
+   '/Users/ezulq/Desktop/Coding/Python/youtube-dl/dist/main',
+   'EXECUTABLE')],)
