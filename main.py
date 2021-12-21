@@ -53,6 +53,7 @@ class youtubeDl:
         subprocess.call(["open", "-R", file_to_show])
 
     def mp3(self):
+        os.system('youtube-dl --rm-cache-dir')
         try:
             url = str(self.urlTextBox.get())
             command = "youtube-dl -f bestaudio --extract-audio --audio-format mp3 --audio-quality 0 " + url
@@ -67,6 +68,7 @@ class youtubeDl:
             open_popup(e)
 
     def mp4(self):
+        os.system('youtube-dl --rm-cache-dir')
         try:
             url = str(self.urlTextBox.get())
             command = "youtube-dl -f 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/bestvideo+bestaudio' --merge-output-format mp4 " + url
@@ -80,9 +82,7 @@ class youtubeDl:
             open_popup(e)
 
     def test(self):
-        print('start')
-        open_popup('success')
-        print('finish')
+        playsound('error.mp3')
 
 def open_popup(result):
     win = tk.Tk()
