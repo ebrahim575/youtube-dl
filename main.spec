@@ -5,14 +5,14 @@ block_cipher = None
 
 
 a = Analysis(['main.py'],
-             pathex=[],
+             pathex=['C:\\Users\\ezulq\\Desktop\\Coding\\Python\\youtube-dl'],
              binaries=[],
              datas=[],
              hiddenimports=[],
              hookspath=[],
              hooksconfig={},
              runtime_hooks=[],
-             excludes=[],
+             excludes=['_bootlocale'],
              win_no_prefer_redirects=False,
              win_private_assemblies=False,
              cipher=block_cipher,
@@ -38,7 +38,3 @@ exe = EXE(pyz,
           target_arch=None,
           codesign_identity=None,
           entitlements_file=None )
-app = BUNDLE(exe,
-             name='main.app',
-             icon=None,
-             bundle_identifier=None)
