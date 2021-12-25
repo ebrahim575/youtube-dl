@@ -1,20 +1,11 @@
-# import tkinter as tk
-# from tkinter import ttk
-#
-# root = tk.Tk()
-#
-# ttk.Style().configure('green/black.TButton',  background='#007AFF')
-#
-# button = ttk.Button(root, text='Click Me!', style='green/black.TButton')
-# button.pack()
-#
-# root.mainloop()
-from tkinter import *
-from tkmacosx import Button
+import os
 
-root = Tk()
 
-B1 = Button(root, text='Mac OSX')
-B1.pack()
+url = input('enter the url :')
+os.system('youtube-dl --rm-cache-dir')
+if '&' in url:
+    url = url[0:url.find('&') + 1]
 
-root.mainloop()
+command = "youtube-dl -f bestaudio --extract-audio --embed-thumbnail --add-metadata --audio-format mp3 --audio-quality 0 " + url
+
+os.system(command)
