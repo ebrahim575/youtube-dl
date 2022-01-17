@@ -1,7 +1,7 @@
 import os
 
-mac = 0
-windows = 1
+mac = 1
+windows = 0
 path = ''
 if mac == 1:
     path = '/Users/ezulq/youtube-dl/'
@@ -14,6 +14,7 @@ filename = input('Enter the file name : ')
 start = str(int(start.split(':')[0])*60 + int(start.split(':')[1]))
 end   = str(int(end.split(':')[0])*60 + int(end.split(':')[1]))
 
-command = 'ffmpeg -ss ' + start + ' -t ' + end + ' -i ' + path + filename + ' -acodec copy ' + path + filename + '_'
+command = 'ffmpeg -ss ' + start + ' -t ' + end + ' -i ' + path + filename + ' -acodec copy ' + path + '_' + filename
+print(command)
 
 os.system(command)
