@@ -4,7 +4,7 @@ from tkinter import *
 import tkinter as tk
 import os
 import subprocess
-from tkmacosx import Button
+#from tkmacosx import Button
 
 class youtubeDl:
     def __init__(self):
