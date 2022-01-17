@@ -98,7 +98,7 @@ class youtubeDl:
                 url = url[0:url.find('&') + 1]
             os.system('youtube-dl --rm-cache-dir')
 
-            command = "youtube-dl -f bestaudio --extract-audio --audio-format mp3 --audio-quality 0 " + url
+            command = "youtube-dl -f bestaudio --extract-audio --embed-thumbnail --add-metadata --audio-format mp3 --audio-quality 0 " + url
             print(command)
             os.system(command)
             # playsound('bamboosoundeffect.mp3')
